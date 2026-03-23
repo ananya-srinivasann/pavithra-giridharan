@@ -28,6 +28,18 @@ body.about-page {
   align-items: center;
 }
 
+.events-section {
+  display: flex;
+  justify-content: column;
+  text-align: center;
+  align-items: center;
+}
+
+.events-section img {
+  max-width: clamp(100px, 3vw, 400px);
+  display: block;
+  margin-bottom: clamp(10px, 2vw, 40px);
+}
 
 .top-textbox .text-block {
   display: flex;
