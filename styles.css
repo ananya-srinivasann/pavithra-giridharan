@@ -669,6 +669,7 @@ hr.orange {
   padding: 70px 20%;
   text-align: center;
   line-height: 1.5;
+  padding-bottom: 0px;
 }
 
 .authors-note h2 {
