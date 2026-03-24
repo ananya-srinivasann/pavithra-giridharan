@@ -3,22 +3,74 @@ html, body {
   padding: 0;
   height: 100%; 
   background-color: var(--bg-color);
+  font-family: 'Amaranth';
+  color:#6a0628;
+}
+
+h2 {
+  font-size: clamp(0.4rem, 3vw, 2rem);
+}
+
+@media (max-width: 800px)
+{
+  h2 {
+    font-size: 1.5rem;
+  }
+  .first-page-bottom button {
+    padding: 40px 40px;
+  }
+
+  .first-page-bottom img {
+    width: 500px;
+    height: auto;
+  }
+
+  
 }
 
 * {
   margin-top: 0; 
 }
 
+@font-face {
+  font-family: 'CAC Champagne';
+  src: url('CAC-Champagne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amaranth';
+  src: url('Amaranth-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Folks';
+  src: url('Folks-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg-color: #f8e5b3; 
 }
 
-.about-page {
+.books-page {
   padding-top: 1px; /* prevents collapse */
 }
 
+.events-page {
+  padding-top: 1px;
+}
+
 /* Colors for the About Page only */
-body.about-page {
+body.books-page {
+  --bg-color: #ffcf88; 
+}
+
+body.events-page {
   --bg-color: #ffcf88; 
 }
 
@@ -30,15 +82,18 @@ body.about-page {
 
 .events-section {
   display: flex;
-  justify-content: column;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   align-items: center;
+  font-size: clamp(1.2rem, 2rem, 3rem);
+  padding: 0px clamp(30px, 10vw, 200px);
 }
 
 .events-section img {
-  max-width: clamp(100px, 3vw, 400px);
+  width: clamp(200px, 40vw, 500px);
+  height: auto;
   display: block;
-  margin-bottom: clamp(10px, 2vw, 40px);
 }
 
 .top-textbox .text-block {
@@ -49,10 +104,12 @@ body.about-page {
   flex-grow: 1;
   background-color: transparent !important;
   margin-top: clamp(0.4rem, 4vw, 1.9rem);
+  
 }
 
 .top-textbox .text-block h1 {
   font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-family: 'CAC Champagne', cursive;
   margin: 0;
 
 }
@@ -61,12 +118,19 @@ body.about-page {
   font-size: clamp(0.6rem, 2vw, 1rem);
   margin: 2px 0 0 0;
   font-size: 16px;
+  
 }
 
 @media (max-width: 768px) {
   .page-content {
     padding-top: 80px;
   }
+  .first-page-bottom img {
+    width: 300px;
+    height: auto;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -134,6 +198,7 @@ body.about-page {
 }
 .nav-links li {
     margin-bottom: 20px;
+    
 }
 
 .nav-links a {
@@ -143,6 +208,7 @@ body.about-page {
     display: block;
     padding: 10px 20px;
     transition: color 0.3s, background-color 0.3s;
+    font-family: 'Folks';
 }
 
 
@@ -213,6 +279,7 @@ hr.orange {
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 1rem;
+  font-family: 'Folks';
 }
 
 .instagram img {
@@ -247,6 +314,15 @@ hr.orange {
   flex: 1;
 }
 
+@media (max-width: 900px)
+{
+  .options {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 10vw, 100px);
+  }
+}
+
 .purchase-more button {
     display: inline-flex;
   align-items: center;    /* Vertical centering */
@@ -261,6 +337,7 @@ hr.orange {
   cursor: pointer;
   letter-spacing: 2px;
   font-weight: bold;
+  font-family: 'Folks';
 }
 
 .author-more button {
@@ -277,6 +354,7 @@ hr.orange {
   cursor: pointer;
   letter-spacing: 2px;
   font-weight: bold;
+  font-family: 'Folks';
 }
 
 .first-page-bottom {
@@ -293,7 +371,7 @@ hr.orange {
 
 .instagram {
   padding-top: clamp(10px, 5vw, 90px);
-  background-color: #ffcf88;
+  /*background-color: #ffcf88;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,7 +407,10 @@ hr.orange {
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 1rem;
+  font-family: 'Folks';
 }
+
+
 
 .book-intro {
   display: flex;
@@ -349,13 +430,38 @@ hr.orange {
   text-align: right;
   gap: 80px;              
   padding: 70px 20%;
-  background-color:#ffcf88; /* Matching your theme */
+  /*background-color:#ffcf88;*/
   line-height: 2;
   padding-bottom: clamp(20px, 3vw, 40px);
+}
+
+@media (max-width: 1200px)
+{
+  .author-intro {
+    padding: 70px 10%;
+  }
+
+  .books-page-intro {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-bio {
+    text-align: center;
+  }
+
 
 }
 
 .book-image img {
+  max-width: 400px;      
+  width: 100%;            
+  height: auto;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*makes the book "pop" */
+}
+
+.author-image img {
   max-width: 400px;      
   width: 100%;            
   height: auto;
@@ -384,8 +490,60 @@ hr.orange {
   padding-bottom: clamp(20px, 4vw, 50px);
   align-items: center;
   justify-content: center;
-  background-color:#ffcf88
-  
+  background-color:#f8e5b3;
+  font-family: 'Folks';
+}
+
+.red-button-orange {
+  width: 100%;
+  display: flex;
+  margin-top: -10px;
+  padding-bottom: clamp(20px, 4vw, 50px);
+  align-items: center;
+  justify-content: center;
+  background-color:#ffcf88;
+  font-family: 'Folks';
+}
+
+.red-button-orange button {
+  display: inline-flex;
+  align-items: center;    /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  height: clamp(40px, 5vw, 60px);
+  width: auto;
+  padding: 0 40px;
+  margin-top: clamp(10px, 2vw, 20px);
+  border: none;
+  background-color: #bd2b46;
+  color: #f8e5b3;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Folks';
+}
+
+.purchase-button-set {
+  display: flex;
+  padding: 0px 15%;
+}
+
+@media (max-width: 1500px) {
+  .purchase-button-set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    width: 90%;          
+    max-width: 800px;    
+    margin: 0 auto;      
+    padding: 20px 0;
+  }
+
+  .purchase-button-set .red-button-orange,
+  .purchase-button-set .red-button-orange a,
+  .purchase-button-set .red-button-orange button {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .red-button button {
@@ -402,19 +560,119 @@ hr.orange {
   cursor: pointer;
   letter-spacing: 2px;
   font-weight: bold;
+  font-family: 'Folks';
 }
 
 .about-text {
   flex: 1;        
   max-width: 1000px;
-  font-size: clamp(0.5rem, 2vw, 20px);
+  font-size: clamp(0.5rem, 1.5vw, 20px);
   text-align: left;
 }
 
+.book-bio {
+  flex: 1;        
+  max-width: 1000px;
+  font-size: clamp(1.2rem, 2vw, 3rem);
+}
+
+.books-page-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 17%;
+}
+
+.books-page-intro img {
+  width: clamp(200px, 50vw, 450px);
+  border-style: double;
+  border-width: 14px;
+  border-color:#bd2b46;
+}
+
 .front-text h1 {
-  font-family: 'Copperplate Gothic', serif;
-  color: #6a0628;
   margin: 15px 0;
+  font-family: 'CAC Champagne', cursive;
+  font-size: clamp(1rem, 11vw, 5rem);
+  color:#bd2b46;
+}
+
+.Giridharan-title h1 {
+  margin: 15px 0;
+  font-family: 'CAC Champagne', cursive;
+  font-size: clamp(1rem, 11vw, 5rem);
+  color:#bd2b46;
+}
+
+@media (max-width: 768px) {
+  .front-text h1 
+  {
+    line-height: 1;
+  }
+
+  .front-text {
+    font-size: 3vw;
+  }
+
+  .purchase-button-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .books-page-intro {
+    padding-bottom: 0px;
+  }
+}
+
+
+@media (max-width: 1080px)
+{
+  .front-text h1 {
+    line-height: 1;
+  }
+
+  .author-intro {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+
+  .about-text {
+    font-size: 20px;
+  }
+  .events-section img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .front-text {
+    font-size: 1.2vw;
+  }
+  .front-text h1 {
+    line-height: 1;
+  }
+
+  .book-bio {
+    text-align: right;
+
+  }
+}
+
+.authors-note {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  padding: 70px 20%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.authors-note h2 {
+  color:#bd2b46;
 }
 
 .front-text button {
@@ -431,6 +689,7 @@ hr.orange {
   cursor: pointer;
   letter-spacing: 2px;
   font-weight: bold;
+  font-family: 'Folks';
 }
 
 
@@ -441,8 +700,8 @@ hr.orange {
     font-size: clamp(20px, 2vw, 50px); 
   }
   
-  .book-image img {
-    max-width: 80%;     
+  .author-image img {
+    max-width: 400px;     
   }
 }
 
@@ -503,4 +762,6 @@ hr.orange {
 
 
 }
+
+
 
