@@ -147,6 +147,8 @@ body.reviews-page {
   }
 }
 
+
+
 @media (max-width: 600px)
 {
   .text-block img {
@@ -154,6 +156,7 @@ body.reviews-page {
     height: auto;
   }
 }
+
 
 
 
@@ -457,7 +460,7 @@ hr.orange {
   text-align: right;
   gap: 80px;              
   padding: 70px 20%;
-  background-color: #f8e5b3; /* Matching your theme */
+  background-color: #f8e5b3;
   line-height: 2;
 }
 
@@ -496,14 +499,14 @@ hr.orange {
   max-width: 400px;      
   width: 100%;            
   height: auto;
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*makes the book "pop" */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*makes book pop */
 }
 
 .author-image img {
   max-width: 400px;      
   width: 100%;            
   height: auto;
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*makes the book "pop" */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*makes book pop */
 }
 
 .Giridharan-title {
@@ -1043,6 +1046,33 @@ hr.orange {
 
 
 
+}
+
+@media (max-width: 550px)
+{
+  .text-block img {
+    width: 300px;
+    height: auto;
+  }
+
+  .hamburger {
+    margin-top: -20px;
+  }
+
+  .reviews-note img {
+    width: 300px;
+    height: auto;
+  }
+
+  .books-page-bottom img {
+    width: 200px;
+    height: auto;
+  }
+
+  .review-section img {
+    width: 150px;
+    height: auto;
+  }
 }
 
 
