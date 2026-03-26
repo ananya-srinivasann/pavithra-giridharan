@@ -1071,12 +1071,18 @@ hr.orange {
 
   .books-page-bottom img {
     width: 200px;
-    height: auto;
+    height: auto !important;
   }
 
   .review-section img {
     width: 150px;
-    height: auto;
+    height: auto !important;
+  }
+
+  .books-page-bottom img,
+  .review-section img {
+    align-self: flex-start; 
+    object-fit: contain; 
   }
 }
 
