@@ -407,7 +407,7 @@ hr.orange {
 }
 
 .books-page-bottom img {
-  width: clamp(100px, 24vw, 600px);
+  width: clamp(100px, 20vw, 500px);
 }
 
 .instagram {
@@ -819,7 +819,7 @@ hr.orange {
 }
 
 .reviews-note img {
-  width: 40%;
+  width: 300px;
   height: auto;
 }
 
@@ -1064,15 +1064,8 @@ hr.orange {
     margin-top: -20px;
   }
 
-  .reviews-note img {
-    width: 300px;
-    height: auto;
-  }
 
-  .books-page-bottom img {
-    width: 200px;
-    height: auto;
-  }
+
 
   .review-section img {
     width: 150px;
