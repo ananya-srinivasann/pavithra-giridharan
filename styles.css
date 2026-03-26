@@ -1079,11 +1079,6 @@ hr.orange {
     height: auto !important;
   }
 
-  .books-page-bottom img,
-  .review-section img {
-    align-self: flex-start; 
-    object-fit: contain; 
-  }
 }
 
 
