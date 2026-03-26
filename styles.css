@@ -1071,12 +1071,12 @@ hr.orange {
 
   .books-page-bottom img {
     width: 200px;
-    height: auto !important;
+    height: auto;
   }
 
   .review-section img {
     width: 150px;
-    height: auto !important;
+    height: auto;
   }
 
 }
