@@ -122,6 +122,20 @@ body.reviews-page {
 
 }
 
+.puzzle-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: clamp(10px, 2vw, 30px);
+  margin-top: clamp(-10px, -3vw, -40px);
+  width: 100%;
+}
+
+.puzzle-img img {
+  width: 250px;
+  height: auto;
+}
+
 .top-textbox .text-block p {
   font-size: clamp(0.6rem, 2vw, 1rem);
   margin: 2px 0 0 0;
