@@ -660,6 +660,15 @@ hr.orange {
   color:#bd2b46;
 }
 
+.Giridharan-title2 h1 {
+  margin: 15px 0px;
+  text-align: center;
+  font-family: 'CAC Champagne', cursive;
+  font-size: clamp(0.6rem, 10vw, 5rem);
+  color:#bd2b46;
+}
+
+
 
 .image-carousel2 {
   height: 60%;
@@ -832,7 +841,24 @@ hr.orange {
   padding: clamp(10px, 2vw, 40px) 20%;
 }
 
+.reviews-note2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(20px, 3vw, 30px);
+  padding: clamp(10px, 2vw, 40px) 20%;
+}
+
+
 .reviews-note img {
+  width: 300px;
+  height: auto;
+}
+
+
+.reviews-note2 img {
   width: 300px;
   height: auto;
 }
