@@ -11,6 +11,46 @@ h2 {
   font-size: clamp(0.4rem, 3vw, 2rem);
 }
 
+.event-box {
+  display: flex;
+  background-color: #f8e5b3;
+  margin-top: clamp(20px, 4vw, 50px);
+  margin-bottom: clamp(20px, 4vw, 50px);
+  width: 70%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 5%;
+  text-align: left;
+  font-family: 'Amaranth';
+  font-size: clamp(10px, 2vw, 20px);
+  line-height: 2;
+  border-width: 7px;
+  border-style:double;
+  border-color:#bd2b46;
+  align-items: right;
+
+}
+
+.event-box b {
+  font-family: 'Folks';
+  font-size: clamp(20px, 3vw, 40px);
+}
+
+.event-img {
+  align-items: right;
+  justify-content: right;
+}
+
+.event-img img {
+  border-width: 6px;
+  border-style:groove;
+  border-color:#bd2b46;     
+  object-fit: cover;    
+  display: block;
+}
+
+
 @media (max-width: 800px)
 {
   h2 {
@@ -150,6 +190,12 @@ body.reviews-page {
   .first-page-bottom img {
     width: 300px;
     height: auto;
+  }
+  .event-img img {
+    max-width: 250px;
+  }
+  .event-box {
+    font-size: 20px;
   }
 
 }
@@ -944,6 +990,7 @@ hr.orange {
     height: auto; 
   }
 
+
 }
 
 .contact-container {
@@ -1003,6 +1050,7 @@ hr.orange {
   color:#bd2b46;
 }
 
+
 .front-text button {
   display: inline-flex;
   align-items: center;    /* Vertical centering */
@@ -1010,7 +1058,7 @@ hr.orange {
   height: clamp(40px, 5vw, 60px);
   width: auto;
   padding: 0 40px;
-  margin-top: clamp(10px, 2vw, 20px);
+  margin-top: clamp(15px, 2.5vw, 20px);
   border: none;
   background-color: #bd2b46;
   color: #f8e5b3;
@@ -1030,6 +1078,16 @@ hr.orange {
   
   .author-image img {
     max-width: 400px;     
+  }
+  .event-box {
+    max-width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .event-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
