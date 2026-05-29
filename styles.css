@@ -467,7 +467,7 @@ hr.orange {
 }
 
 .books-page-bottom img {
-  width: clamp(100px, 20vw, 500px);
+  width: 350px;
 }
 
 .instagram {
@@ -822,6 +822,10 @@ hr.orange {
 
   .books-page-intro {
     padding-bottom: 0px;
+  }
+
+  .purchase-button-set .red-button-orange:nth-child(5) a {
+    max-width: 100%;
   }
 }
 
